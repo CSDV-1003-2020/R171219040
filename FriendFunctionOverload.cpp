@@ -24,7 +24,7 @@ void operator-(UnaryFriend &x)
   x.b=-x.b;
   x.c=-x.c;
 }
-nt main()
+int main()
 {
      UnaryFriend x1;
      x1.getvalues();
