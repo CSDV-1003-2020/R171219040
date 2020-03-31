@@ -24,4 +24,15 @@ void operator-(UnaryFriend &x)
   x.b=-x.b;
   x.c=-x.c;
 }
+nt main()
+{
+     UnaryFriend x1;
+     x1.getvalues();
+     cout<<"Before Overloading\n";
+     x1.show();
+     cout<<"After Overloading \n";
+     -x1;
+      x1.show();
+      return 0;
+}
 
