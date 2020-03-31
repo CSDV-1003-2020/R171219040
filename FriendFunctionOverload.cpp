@@ -17,3 +17,11 @@ class UnaryFriend
          }
          void friend operator-(UnaryFriend &x);      //Pass by reference
 };
+
+void operator-(UnaryFriend &x)
+{
+  x.a=-x.a; //Object name must be used as it is a friend function
+  x.b=-x.b;
+  x.c=-x.c;
+}
+
