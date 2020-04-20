@@ -1,3 +1,4 @@
+// Identifying palindrome strings using a deque
 #include <cctype>
 #include <deque>
 #include <iostream>
