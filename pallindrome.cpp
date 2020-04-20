@@ -4,14 +4,15 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+using namespace std;
 
-bool is_palindrome(const std::string& s)
+bool is_palindrome(const string& s)
 {
-    std::deque<char> d;
+    deque<char> d;
 
     for(char c : s)
-        if(std::isalpha(c))
-            d.push_back(std::toupper(c));
+        if(isalpha(c))
+            d.push_back(toupper(c));
 
     char c1{};
     char c2{};
@@ -27,15 +28,15 @@ bool is_palindrome(const std::string& s)
 }
 int main()
 {
-    std::vector<std::string> test_strings{ "a", "aa", "aba", "abba", "abbcbba", "ab", "abc", "radar", "bob", "ana",
+    vector<string> test_strings{ "a", "aa", "aba", "abba", "abbcbba", "ab", "abc", "radar", "bob", "ana",
         "avid diva", "Amore, Roma", "A Toyota's a toyota", "A Santa at NASA", "C++",
         "A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!", "This is a palindrome", "palindrome" };
    
-    std::cout << std::boolalpha;
-    std::cout << std::setw(8) << std::left << "Result" << "String" << std::endl;
+    cout << boolalpha;
+    cout << setw(8) << left << "Result" << "String" << endl;
     for(const auto& s : test_strings) {
-        std::cout << std::setw(8) << std::left << is_palindrome(s)  << s << std::endl;
+        cout << setw(8) << left << is_palindrome(s)  << s << endl;
     }
-    std::cout << std::endl;
+    cout << endl;
     return 0;
 }
