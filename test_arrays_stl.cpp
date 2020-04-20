@@ -82,6 +82,15 @@ void test8() {
     auto max_num = std::max_element(arr1.begin(), arr1.end());
     std::cout << "min: " << *min_num << " , max: " << *max_num << std::endl;
 }
+void test9() {
+    std::cout << "\nTest9 =========================" << std::endl;
+
+       //accumulate is from #include <numeric>
+    std::array<int, 5> arr1 {1,2,3,4,5};    
+
+    int sum = std::accumulate(arr1.begin(), arr1.end(), 0);
+    std::cout << "Sum of the elements in arr1 is: " << sum << std::endl;
+}
 
 int main()  {    
 
@@ -89,6 +98,8 @@ int main()  {
     test2();
     test3();
     test4();
+    test8();
+    test9();
     
     return 0;
 }
