@@ -10,7 +10,8 @@ using namespace std;
 bool is_palindrome(const string& s)
 {
     deque<char> d;
-
+    
+    // add all the string characters that are alpha to the back of the deque in uppercase
     for(char c : s)
         if(isalpha(c))
             d.push_back(toupper(c));
