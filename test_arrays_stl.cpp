@@ -73,6 +73,15 @@ void test4() {
     std::sort(arr1.begin(), arr1.end());
     display(arr1);
 }
+void test8() {
+    std::cout << "\nTest8 =========================" << std::endl;
+
+    std::array<int, 5> arr1 {2,1,4,5,3};     
+
+    std::array<int,5>::iterator min_num = std::min_element(arr1.begin(), arr1.end());
+    auto max_num = std::max_element(arr1.begin(), arr1.end());
+    std::cout << "min: " << *min_num << " , max: " << *max_num << std::endl;
+}
 
 int main()  {    
 
