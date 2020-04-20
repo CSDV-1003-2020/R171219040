@@ -10,7 +10,7 @@ using namespace std;
 bool is_palindrome(const string& s)
 {
     deque<char> d;
-    
+
     // add all the string characters that are alpha to the back of the deque in uppercase
     for(char c : s)
         if(isalpha(c))
@@ -18,6 +18,10 @@ bool is_palindrome(const string& s)
 
     char c1{};
     char c2{};
+    // while are more than 1 characters in the deque
+    //      remove and compare the front character with the back character
+    //      if they are not the same - return false since it can't be a palindrome
+    // if you complete the loop then the string must be a palindrome so return true
     while(d.size() > 1) {
         c1 = d.front();
         c2 = d.back();
