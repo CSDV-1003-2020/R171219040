@@ -74,7 +74,7 @@ void test4() {
     display(arr1);
 }
 void test5() {
-    std::cout << "\nTest6 =========================" << std::endl;
+    std::cout << "\nTest5 =========================" << std::endl;
 
     std::array<int, 5> arr1 {2,1,3,3,5}; 
 
@@ -85,14 +85,14 @@ void test5() {
         std::cout << "No adjacent elements found" << std::endl;
 }
 void test6() {
-    std::cout << "\nTest8 =========================" << std::endl;
+    std::cout << "\nTest6 =========================" << std::endl;
     std::array<int, 10> arr1 {1,2,3,1,2,3,3,3,3,3};
     
     int count = std::count(arr1.begin(), arr1.end(), 3);
     std::cout << "Found 3 : " << count << " times" << std::endl;
 }
 void test7() {
-    std::cout << "\nTest9 =========================" << std::endl;
+    std::cout << "\nTest7 =========================" << std::endl;
     std::array<int, 10> arr1 {1, 2, 3, 50, 60, 70, 80, 200, 300 ,400};
     // find how many numbers are between 10 and 200 ->  50,60,70,80
     
