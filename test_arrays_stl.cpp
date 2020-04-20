@@ -64,12 +64,22 @@ void test3() {
     
     display(arr1);
 }
+void test4() {
+    std::cout << "\nTest4 =========================" << std::endl;
+
+    std::array<int, 5> arr1 {2,1,4,5,3};     
+    display(arr1);
+    
+    std::sort(arr1.begin(), arr1.end());
+    display(arr1);
+}
 
 int main()  {    
 
     test1();
     test2();
     test3();
+    test4();
     
     return 0;
 }
