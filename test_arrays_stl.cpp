@@ -35,10 +35,29 @@ void test1() {
     std::cout << "Front of arr2: " << arr2.front() << std::endl;        //10
     std::cout << "Back of arr2: " << arr2.back() << std::endl;          //50
 }
+void test2() {
+    std::cout << "\nTest2 =========================" << std::endl;
+    std::array<int, 5> arr1 {1,2,3,4,5};     
+    std::array<int, 5> arr2 {10,20,30,40,50};
+    
+    display(arr1);
+    display(arr2);
+    
+    arr1.fill(0);
+    
+    display(arr1);
+    display(arr2);
+    
+    arr1.swap(arr2);
+    
+    display(arr1);
+    display(arr2);
+}
 
 int main()  {    
 
     test1();
+    test2();
     
     return 0;
 }
