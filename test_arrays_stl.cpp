@@ -73,13 +73,43 @@ void test4() {
     std::sort(arr1.begin(), arr1.end());
     display(arr1);
 }
+void test5() {
+    std::cout << "\nTest6 =========================" << std::endl;
 
+    std::array<int, 5> arr1 {2,1,3,3,5}; 
+
+    auto adjacent = std::adjacent_find(arr1.begin(), arr1.end());
+    if (adjacent != arr1.end()) 
+        std::cout << "Adjacent element found with value: " << *adjacent << std::endl;
+    else 
+        std::cout << "No adjacent elements found" << std::endl;
+}
+void test6() {
+    std::cout << "\nTest8 =========================" << std::endl;
+    std::array<int, 10> arr1 {1,2,3,1,2,3,3,3,3,3};
+    
+    int count = std::count(arr1.begin(), arr1.end(), 3);
+    std::cout << "Found 3 : " << count << " times" << std::endl;
+}
+void test7() {
+    std::cout << "\nTest9 =========================" << std::endl;
+    std::array<int, 10> arr1 {1, 2, 3, 50, 60, 70, 80, 200, 300 ,400};
+    // find how many numbers are between 10 and 200 ->  50,60,70,80
+    
+    int count = std::count_if(arr1.begin(), arr1.end(), 
+                                            [](int x) { return x>10 && x<200; });
+                                            
+    std::cout << "Found  " << count << " matches" << std::endl;
+}
 int main()  {    
 
     test1();
     test2();
     test3();
     test4();
-    
+    test5();
+    test6();
+    test7();
+
     return 0;
 }
