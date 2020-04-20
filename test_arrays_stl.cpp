@@ -73,13 +73,24 @@ void test4() {
     std::sort(arr1.begin(), arr1.end());
     display(arr1);
 }
+void test5() {
+    std::cout << "\nTest6 =========================" << std::endl;
 
+    std::array<int, 5> arr1 {2,1,3,3,5}; 
+
+    auto adjacent = std::adjacent_find(arr1.begin(), arr1.end());
+    if (adjacent != arr1.end()) 
+        std::cout << "Adjacent element found with value: " << *adjacent << std::endl;
+    else 
+        std::cout << "No adjacent elements found" << std::endl;
+}
 int main()  {    
 
     test1();
     test2();
     test3();
     test4();
+    test5();
     
     return 0;
 }
