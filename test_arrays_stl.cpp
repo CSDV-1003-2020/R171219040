@@ -84,6 +84,13 @@ void test5() {
     else 
         std::cout << "No adjacent elements found" << std::endl;
 }
+void test6() {
+    std::cout << "\nTest8 =========================" << std::endl;
+    std::array<int, 10> arr1 {1,2,3,1,2,3,3,3,3,3};
+    
+    int count = std::count(arr1.begin(), arr1.end(), 3);
+    std::cout << "Found 3 : " << count << " times" << std::endl;
+}
 int main()  {    
 
     test1();
@@ -91,6 +98,7 @@ int main()  {
     test3();
     test4();
     test5();
-    
+    test6();
+
     return 0;
 }
