@@ -53,11 +53,23 @@ void test2() {
     display(arr1);
     display(arr2);
 }
+void test3() {
+    std::cout << "\nTest3 =========================" << std::endl;
+
+    std::array<int, 5> arr1 {1,2,3,4,5};     
+
+    int *ptr = arr1.data();
+    std::cout << ptr << std::endl;
+    *ptr = 10000;
+    
+    display(arr1);
+}
 
 int main()  {    
 
     test1();
     test2();
+    test3();
     
     return 0;
 }
